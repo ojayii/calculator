@@ -38,7 +38,7 @@ main {
 }
 
 input {
-    font-size: 80px;
+    font-size: 10rem;
     max-width: 100%;
     height: auto;
     text-align: right;
@@ -50,7 +50,7 @@ input {
 
 main img {
     height: auto;
-    width: 40px;
+    width: 5rem;
     position: absolute;
     left: 7%;
     top: calc(5% + 6rem);
@@ -67,7 +67,7 @@ main img:active {
 }
 
 button {
-    font-size: 32px;
+    font-size: 4rem;
     width: 18.5vw;
     max-wdth: 4rem;
     max-hight: 4rem;
