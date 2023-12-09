@@ -32,7 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #ffffff1b;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border-radius: 13px;
     position: relative;
 }
