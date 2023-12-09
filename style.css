@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     font-family: poppins, sans-serif;
-    background: url('images/squid1.jpg');
+    background: white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
