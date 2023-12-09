@@ -50,7 +50,7 @@ input {
 
 main img {
     height: auto;
-    width: 16vw
+    width: 13vw;
     position: absolute;
     left: 7%;
     top: calc(5% + 14rem);
