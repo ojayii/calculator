@@ -100,7 +100,7 @@ button:active {
     background-color: #F5F5F5;
 }
 
-@media(min-width: 450px){
+@media only screen and (min-width: 450px){
     body {
         display: none;
     }
