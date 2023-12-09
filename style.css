@@ -33,12 +33,12 @@ main {
     align-items: center;
     background-color: #ffffff1b;
     backdrop-filter: blur(12px);
-    border-radius: 13px;
+    border-radius: 27px;
     position: relative;
 }
 
 input {
-    font-size: 10rem;
+    font-size: 12rem;
     max-width: 100%;
     height: auto;
     text-align: right;
@@ -50,10 +50,10 @@ input {
 
 main img {
     height: auto;
-    width: 5rem;
+    width: 16vw
     position: absolute;
     left: 7%;
-    top: calc(5% + 6rem);
+    top: calc(5% + 11rem);
 }
 
 main img:active {
@@ -67,7 +67,7 @@ main img:active {
 }
 
 button {
-    font-size: 4rem;
+    font-size: 5rem;
     width: 18.5vw;
     max-wdth: 4rem;
     max-hight: 4rem;
