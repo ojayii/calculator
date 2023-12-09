@@ -53,7 +53,7 @@ main img {
     width: 13vw;
     position: absolute;
     left: 7%;
-    top: calc(10% + 14rem);
+    top: calc(7.5% + 14rem);
 }
 
 main img:active {
