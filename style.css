@@ -54,6 +54,7 @@ main img {
     position: absolute;
     left: 7%;
     top: calc(7.5% + 14rem);
+    touch-action: manipulation;
 }
 
 main img:active {
@@ -75,6 +76,7 @@ button {
     border: none;
     background-color: #ffffff20;
     border-radius: 50%;
+    touch-action: manipulation;
 }
 button:nth-child(1),
 button:nth-child(2),
