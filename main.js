@@ -7,7 +7,7 @@ let calc = document.getElementById('calc')
 let body = document.querySelector("body")
 let reload = document.getElementById('reload')
 
-let backgrounds = ["url('images/smile.jpg')", "url('images/smiles.jpg')", "url('images/car.jpg')", "url('images/squid.jpg')", "url('images/squid1.jpg')", "url('images/moon.jpg')", "url('images/card.jpg')", "url('images/fangs.jpg')", "url('images/smoke.jpg')", "url('images/wolf.jpg')", "url('images/smile2.jpg')", "url('images/stones.jpg')", "url('images/vlad.jpg')", "url('images/cat.jpg')"]
+let backgrounds = ["white", "url('images/smile.jpg')", "url('images/smiles.jpg')", "url('images/car.jpg')", "url('images/squid.jpg')", "url('images/squid1.jpg')", "url('images/moon.jpg')", "url('images/card.jpg')", "url('images/fangs.jpg')", "url('images/smoke.jpg')", "url('images/wolf.jpg')", "url('images/smile2.jpg')", "url('images/stones.jpg')", "url('images/vlad.jpg')", "url('images/cat.jpg')"]
 
 let display = []
 
@@ -35,25 +35,54 @@ pop.addEventListener("click", function() {
        input.value = display.join('')
 })
 
-let bgValue = 0;
+//localStorage.clear()
+let bgValue = JSON.parse(localStorage.getItem("bgVal")) || 0;
+
+function storeBg(value) {
+    localStorage.setItem("bgVal", JSON.stringify(value));
+}
+
+body.style.background = backgrounds[bgValue];
+body.style.backgroundSize= "cover"
+body.style.backgroundPosition= "center"     
+body.style.backgroundRepeat= "no-repeat"
 
 reload.addEventListener("click", function() {
+    bgValue = (bgValue + 1) % backgrounds.length;
 
-    bgValue +=  1
-   
-   for (let i = 0; i < backgrounds.length; i++) {
-       if(bgValue === backgrounds.length) {
-           bgValue = 0
-       }
-   }
-     
-   body.style.background =    backgrounds[bgValue]   
-   body.style.backgroundSize= "cover"
-   body.style.backgroundPosition= "center"     
-   body.style.backgroundRepeat= "no-repeat"
+    body.style.background = backgrounds[bgValue];
+    body.style.backgroundSize= "cover"
+    body.style.backgroundPosition= "center"     
+    body.style.backgroundRepeat= "no-repeat"
 
-})
+    storeBg(bgValue);
+
+});
 
 reload.addEventListener("dblclick", function() {
-    body.style.background= "white"
+        
+    bgValue = (bgValue - 3 + backgrounds.length) % backgrounds.length;
+
+
+    document.body.style.background = backgrounds[bgValue];
+    body.style.backgroundSize= "cover"
+    body.style.backgroundPosition= "center"     
+    body.style.backgroundRepeat= "no-repeat"
+
+    storeBg(bgValue);
+
 })
+
+let lastTouchTime = 0;
+const tapThreshold = 300; // Adjust this threshold as needed
+
+document.addEventListener('touchstart', function(event) {
+    const currentTime = new Date().getTime();
+
+    if (currentTime - lastTouchTime < tapThreshold) {
+        event.preventDefault(); // Prevent default behavior (e.g., zooming)
+    }
+
+    lastTouchTime = currentTime;
+});
+    
