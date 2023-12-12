@@ -12,9 +12,11 @@ body {
     flex-direction: column;
     justify-content: center;
     font-family: poppins, sans-serif;
+    background: ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
 }
 
 * {
@@ -31,13 +33,13 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #ffffff1b;
-    backdrop-filter: blur(14px);
-    border-radius: 27px;
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
     position: relative;
 }
 
 input {
-    font-size: 14rem;
+    font-size: 5rem;
     max-width: 100%;
     height: auto;
     text-align: right;
@@ -49,10 +51,10 @@ input {
 
 main img {
     height: auto;
-    width: 13vw;
+    width: 2.5rem;
     position: absolute;
     left: 7%;
-    top: calc(7.5% + 14rem);
+    top: calc(5% + 6rem);
 }
 
 main img:active {
@@ -66,7 +68,7 @@ main img:active {
 }
 
 button {
-    font-size: 5rem;
+    font-size: 2rem;
     width: 18.5vw;
     max-wdth: 4rem;
     max-hight: 4rem;
@@ -86,7 +88,7 @@ button:nth-child(16) {
 }
 button:nth-child(19) {
     width: 39vw;
-    border-radius: 25px;
+    border-radius: 20px;
     background-color: #ff8800;
     color: white;
 }
@@ -99,9 +101,9 @@ button:active {
     background-color: #F5F5F5;
 }
 
-/* @media only screen and (min-width: 450px){
+@media(min-width: 450px){
     body {
         display: none;
     }
-}
- */
+    }
+    
