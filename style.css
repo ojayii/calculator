@@ -88,7 +88,7 @@ button:nth-child(16) {
 }
 button:nth-child(19) {
     width: 39vw;
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: #ff8800;
     color: white;
 }
