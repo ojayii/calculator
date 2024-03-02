@@ -72,17 +72,3 @@ reload.addEventListener("dblclick", function() {
     storeBg(bgValue);
 
 })
-
-let lastTouchTime = 0;
-const tapThreshold = 300; // Adjust this threshold as needed
-
-document.addEventListener('touchstart', function(event) {
-    const currentTime = new Date().getTime();
-
-    if (currentTime - lastTouchTime < tapThreshold) {
-        event.preventDefault(); // Prevent default behavior (e.g., zooming)
-    }
-
-    lastTouchTime = currentTime;
-});
-    
