@@ -1,12 +1,15 @@
-body, html {
+body,
+html {
     padding: 0;
     margin: 0;
     max-width: 100%;
 }
+
 body {
     margin: 0;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     paddng-inline: 5%;
     display: flex;
     flex-direction: column;
@@ -39,14 +42,16 @@ main {
 }
 
 input {
-    font-size: 5rem;
-    max-width: 100%;
+    font-size: clamp(4rem, 20vw, 5rem);
+    width: 100%;
+    max-width: 55rem;
     height: auto;
     text-align: right;
     margin-bottom: 10vh;
     border: none;
     color: #ff8800;
     background-color: inherit;
+    /* overflow: scroll; */
 }
 
 main img {
@@ -55,6 +60,8 @@ main img {
     position: absolute;
     left: 7%;
     top: calc(5% + 6rem);
+    background-color: red;
+    height: 2.5rem;
 }
 
 main img:active {
@@ -62,21 +69,24 @@ main img:active {
 }
 
 .buttons {
-    display: flex;ter;
+    display: flex;
     flex-wrap: wrap;
-    gap: 2vw;
+    gap: clamp(0.1rem, 2vw, 3rem);
+    max-width: 55rem;
+    height: auto;
 }
 
 button {
-    font-size: 2rem;
-    width: 18.5vw;
+    font-size: clamp(2rem, 10vw, 2rem);
+    width: clamp(2rem, 18.5vw, 5rem);
+    height: clamp(2rem, 18.5vw, 5rem);
     max-wdth: 4rem;
     max-hight: 4rem;
-    height: 18.5vw;
     border: none;
     background-color: #ffffff20;
     border-radius: 50%;
 }
+
 button:nth-child(1),
 button:nth-child(2),
 button:nth-child(3),
@@ -86,14 +96,15 @@ button:nth-child(12),
 button:nth-child(16) {
     color: #ff8800;
 }
+
 button:nth-child(19) {
-    width: 39vw;
+    width: clamp(4rem, 39vw, 20rem);
     border-radius: 12px;
     background-color: #ff8800;
     color: white;
 }
 
-button:nth-child(19):active{
+button:nth-child(19):active {
     background-color: #cc6d00;
 }
 
@@ -101,9 +112,8 @@ button:active {
     background-color: #F5F5F5;
 }
 
-@media(min-width: 450px){
-    body {
-        display: none;
+@media(min-width: 450px) {
+    button {
+        box-shadow: 0 0 20px rgb(160, 155, 155);
     }
-    }
-    
+}
