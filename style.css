@@ -60,8 +60,6 @@ main img {
     position: absolute;
     left: 7%;
     top: calc(5% + 6rem);
-    background-color: red;
-    height: 2.5rem;
 }
 
 main img:active {
