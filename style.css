@@ -1,0 +1,127 @@
+:root {
+    --primary: #8ECAE6;
+    --secondary: #219EBC;
+    --dark: #023047;
+    --accent-primary: #FFB703;
+    --accent-secondary: #FB8500;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: poppins, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 1s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    width: 90%;
+    max-width: 25rem;
+    height: auto;
+    margin: 0 auto;
+    padding: clamp(1rem, 5%, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff1b;
+    backdrop-filter: blur(10px);
+    border-radius: 13px;
+    position: relative;
+}
+
+input {
+    font-size: clamp(4rem, 20vw, 5rem);
+    width: 100%;
+    max-width: 55rem;
+    height: auto;
+    text-align: right;
+    margin-bottom: 10vh;
+    border: none;
+    color: var(--accent-primary);
+    background-color: inherit;
+    /* overflow: scroll; */
+}
+
+main img {
+    height: auto;
+    width: 2.5rem;
+    position: absolute;
+    left: 7%;
+    top: calc(5% + 6rem);
+}
+
+main img:active {
+    transform: scale(0.9);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.1rem, 2vw, 1rem);
+    height: auto;
+    justify-content: space-between;
+}
+
+button {
+    font-size: clamp(2rem, 10vw, 2rem);
+    /* width: clamp(2rem, 18.5vw, 5rem);
+    height: clamp(2rem, 18.5vw, 5rem); */
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    color: var(--dark);
+    background-color: #ffffff20;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16) {
+    color: var(--accent-primary);
+}
+
+button:nth-child(19) {
+    /* width: clamp(4rem, 39vw, 20rem); */
+    flex-grow: 1;
+    border-radius: 12px;
+    background-color: var(--accent-primary);
+    color: white;
+}
+
+button:nth-child(19):active {
+    background-color: var(--accent-secondary);
+}
+
+button:active {
+    background-color: #F5F5F5;
+}
+
+@media(min-width: 450px) {
+    button {
+        /* box-shadow: 0 0 20px rgb(160, 155, 155); */
+    }
+}
